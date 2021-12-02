@@ -1,22 +1,22 @@
 <?php
 
-$simpsons_character = [ 
-    "homer": {
+$simpsons_character = array( 
+    array ("homer": {
         "first_name": "Homer",
         "last_name": "Simpson",
         "age": "40",
         "occupation": " Nuclear Safety Inspector",
         "voiced_by": "Dan Castellaneta",
         "image_url": "images/homer.png"
-    },
-    "marge": {
+    }),
+    array("marge": {
         "first_name": "Marge",
         "last_name": "Simpson",
         "age": "40",
         "occupation": "Homemaker",
         "voiced_by": "Julie Kavner",
         "image_url": "images/marge.png"
-    },
+    }),
     "bart": {
         "first_name": "Bart",
         "last_name": "Simpson",
@@ -47,4 +47,4 @@ $simpsons_character = [
         "voiced_by": "",
         "image_url": "images/moe.png"
     }
-]
+)
