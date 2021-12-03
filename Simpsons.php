@@ -1,5 +1,5 @@
 <?php
-
+//set up multidimensional array with card info for each simpson
 $simpsons_array = [
    [
         "first_name" => "Homer",
@@ -54,4 +54,20 @@ $simpsons_array = [
     ],
 ];
 
-print_r($simpsons_array);
+// echo "<pre>";
+// print_r($simpsons_array);
+// echo "</pre>";
+
+//first I want to display all characters in the array, as their own li within a ul
+//ok line 65-71 correctly displays all items in multi array, each needs styling now, and image is not working 
+
+?>
+
+<ul>
+    <?php foreach($simpsons_array as $character) :?>
+        <?php foreach($character as $card) :?>
+        <li> <?= $card ?> </li>
+        <?php endforeach ?>    
+    <?php endforeach ?>  
+</ul>
+
