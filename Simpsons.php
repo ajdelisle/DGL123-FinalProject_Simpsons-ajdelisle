@@ -63,7 +63,7 @@ $simpsons_array = [
 // echo "</pre>";
 
 //first I want to display all characters in the array, as their own li within a ul
-//ok line 65-71 correctly displays all items in multi array, each needs styling now, and image is not working 
+//ok correctly displays all items in multi array, each needs styling now, and image is not working 
 
 ?>
 
