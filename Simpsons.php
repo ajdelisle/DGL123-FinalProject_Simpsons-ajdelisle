@@ -5,12 +5,13 @@ use function PHPSTORM_META\type;
 
 $simpsons_array = [
    [
+       
         "first_name" => "Homer",
         "last_name" => "Simpson",
         "age"=> "40",
         "occupation" => " Nuclear Safety Inspector",
         "voiced_by"=> "Dan Castellaneta",
-        "image_url"=> "images/homer.png"
+        
    ], 
 
   [
@@ -19,7 +20,7 @@ $simpsons_array = [
         "age" => "40",
         "occupation" =>"Homemaker",
         "voiced_by" => "Julie Kavner",
-        "image_url" => "images/marge.png"
+        
   ],
 
     [
@@ -28,7 +29,7 @@ $simpsons_array = [
         "age" => "10",
         "occupation" => "Student",
         "voiced_by" => "Nancy Cartwright",
-        "image_url" => "images/bart.png"
+        
     ],
 
    [
@@ -37,14 +38,14 @@ $simpsons_array = [
         "age" =>"8",
         "occupation" => "Student",
         "voiced_by" => "Yeardley Smith",
-        "image_url" => "images/lisa.png"
+        
    ],
     
   [
         "first_name" => "Maggie",
         "last_name" => "Simpson",
         "age" => "8",
-        "image_url" => "images/maggie.png"
+       
   ],
 
     [
@@ -53,7 +54,7 @@ $simpsons_array = [
         "age" => "55",
         "occupation" => "Bartender",
         "voiced_by" => "",
-        "image_url" => "images/moe.png"
+       
     ],
 ];
 
@@ -68,7 +69,7 @@ $simpsons_array = [
 
 <ul>
     <?php foreach($simpsons_array as $character) :?>
-        <img src="images/<?=($character[$card])?>.png"/>
+        <img src="images/<?=($character[$card])?>.png" ?>
         <?php foreach($character as $card) :?>
            
                 <li><?=$card?></li>
