@@ -81,6 +81,10 @@ ul {
     margin-bottom: 50px;
 }
 
+.characters_itemContainer:nth-child(2n) {
+    margin-right: 0;
+}
+
 .characters_items {
     display: flex;
     flex-wrap: wrap;
