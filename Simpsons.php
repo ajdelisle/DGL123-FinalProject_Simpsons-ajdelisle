@@ -1,7 +1,7 @@
 <?php
 //set up multidimensional array with card info for each simpson
 
-use function PHPSTORM_META\type;
+
 
 $simpsons_array = [
    [
@@ -78,10 +78,10 @@ $simpsons_array = [
     <?php endforeach ?>  
 </ul>
 
-<!-- <img src = "images/<?=($characters[$i])?>.png"
-​<li><img src = "images/<?=($characters[$i])?>.png"  alt <?= ucwords($characters[$i]) ?> /><h3> <?= ucwords($characters[$i]) ?> </h3> </li>
-   -->
+<!-- <img src = "images/<?=($characters[$i])?>.png">
+​<li> img src = "images/<?=($characters[$i])?>.png"  alt <?= ucwords($characters[$i]) ?> /><h3> <?= ucwords($characters[$i]) ?> </h3> </li>
+  
    
-   <!-- <?php if(type($checkbox)== true) :?> looking to select only checked character cards to show-->
-   <!-- <img src="images/<?=($character[$card])?>.png"/>  -->
-     <!-- <?php endif ?> -->
+   <?php if (type == checked) :?> looking to select only checked character cards to show
+   <img src="images/<?=($character[$card])?>.png"/> 
+    <?php endif ?> -->

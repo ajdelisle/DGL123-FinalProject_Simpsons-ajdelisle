@@ -1,3 +1,10 @@
+/* Final Project for PHP - The Simpsons Website Recreation
+    Amanda Delisle: Due Dec 8th, 2021 
+    Contact: thecrystalwoman@gmail.com */
+
+
+/* main base styles  */
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -14,6 +21,12 @@ header {
     width: 140px;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .layout-container {
     padding-left: 6%;
     padding-left: 6%;
@@ -26,6 +39,9 @@ header {
     margin-right: auto;
 }
 
+
+/* form styles  */
+
 .form_itemsContainer {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
     margin-bottom: 50px;
@@ -36,13 +52,44 @@ header {
     width: 100%;
 }
 
+.form_card {
+    padding: 4%;
+}
+
+.form_heading h3:first-child {
+    margin-top: 0;
+}
+
+.form_item {
+    margin-bottom: 0.5rem;
+}
+
+.form_button {
+    margin-top: 0.5rem;
+}
+
+
+/* character styles */
+
+.characters_itemContainer {
+    margin-right: 50px;
+    width: calc((100%-50px)/2);
+}
+
+.characters_itemContainer {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    margin-bottom: 50px;
+}
+
 .characters_items {
     display: flex;
     flex-wrap: wrap;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.characters_image {
+    width: 100%;
+}
+
+.characters_info {
+    padding: 8%;
 }
