@@ -10,6 +10,10 @@ header {
     margin-bottom: 50px;
 }
 
+.site-header_logo {
+    width: 140px;
+}
+
 .layout-container {
     padding-left: 6%;
     padding-left: 6%;
@@ -25,6 +29,11 @@ header {
 .form_itemsContainer {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
     margin-bottom: 50px;
+}
+
+.form_image {
+    display: block;
+    width: 100%;
 }
 
 .characters_items {
