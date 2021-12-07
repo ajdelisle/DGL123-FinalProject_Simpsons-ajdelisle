@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: inline;
+}
+
+.site-header {
+    margin-bottom: 50px;
+}
+
+.layout-container {
+    padding-left: 6%;
+    padding-left: 6%;
+}
