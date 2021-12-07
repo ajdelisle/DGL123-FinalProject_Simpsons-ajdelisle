@@ -93,3 +93,11 @@ ul {
 .characters_info {
     padding: 8%;
 }
+
+.characters_name h3:first-child {
+    margin-top: 0;
+}
+
+.characters_attribute {
+    margin-bottom: 0.5rem;
+}
