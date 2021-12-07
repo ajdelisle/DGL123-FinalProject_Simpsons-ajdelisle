@@ -26,3 +26,14 @@ header {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
     margin-bottom: 50px;
 }
+
+.characters_items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
