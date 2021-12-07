@@ -3,7 +3,7 @@
 
 
 
-$simpsons_array = [
+$character= [
    [
        
         "first_name" => "Homer",
@@ -61,12 +61,17 @@ $simpsons_array = [
 // echo "<pre>";
 // print_r($simpsons_array);
 // echo "</pre>";
+foreach ($character as $item){
+    foreach ($item as $list => $attribute){
+        $display = ucwords(str_replace("_"," ",$list));
+        echo "{$display}: {$attribute}<br/>";
+    }
+    }
 
-//first I want to display all characters in the array, as their own li within a ul
-//ok correctly displays all items in multi array, each needs styling now, and image is not working 
+
 
 ?>
-
+<!-- first I want to display all characters in the array, as their own li within a ul -->
 <ul>
     <?php foreach($simpsons_array as $character) :?>
         <img src="images/<?=($character[$card])?>.png" ?>
@@ -77,6 +82,8 @@ $simpsons_array = [
         <?php endforeach ?>    
     <?php endforeach ?>  
 </ul>
+<!-- ok correctly displays all items in multi array, each needs styling now, and image is not working  -->
+
 
 <!-- <img src = "images/<?=($characters[$i])?>.png">
 ​<li> img src = "images/<?=($characters[$i])?>.png"  alt <?= ucwords($characters[$i]) ?> /><h3> <?= ucwords($characters[$i]) ?> </h3> </li>
