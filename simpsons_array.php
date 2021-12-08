@@ -4,12 +4,12 @@
 $conn = mysqli_connect('localhost', 'root', '', 'Simpsons');
 
 //set up multidimensional array with info for each character
-$homer= $_POST["homer"];
-$marge= $_POST["marge"];
-$bart= $_POST["bart"];
-$lisa= $_POST["lisa"];
-$maggie= $_POST["maggie"];
-$moe= $_POST["moe"];
+// $homer= $_GET["homer"];
+// $marge= $_GET["marge"];
+// $bart= $_GET["bart"];
+// $lisa= $_GET["lisa"];
+// $maggie= $_GET["maggie"];
+// $moe= $_GET["moe"];
 
 $characters = array(
 
@@ -71,17 +71,23 @@ $characters = array(
 ?>
 <!-- first I want to display all characters in the array, as their own li within a ul -->
 <ul>
-    <?php foreach($characters as $character) :?>
-        
-       
-       <img src = "images/homer.png">
+    <!-- setting conditional that if submit is hit then we would fetch info for these characters -->
+<?php if ( isset( $_GET['submit'] ) ):?>
+    <?= $homer= $_GET["homer"];$marge= $_GET["marge"];
+        $bart= $_GET["bart"]; $lisa= $_GET["lisa"];
+        $maggie= $_GET["maggie"]; $moe= $_GET["moe"];?>
 
+    <?php foreach($characters as $character) :?>
+       <!-- this cycles through the first array of character blocks -->
         <?php foreach($character as $list => $attribute) :?>
+           <!-- this cycles through the individual attributes in the list of character blocks -->
            <?php $display = ucwords(str_replace("_"," ",$list)) ?>
-                <li><b><?= "{$display}:" ?></b> <?= "{$attribute}" ?></li>
-          
-        <?php endforeach ?>    
+                <li><img src = <?="images/[$characters[$character].png"?>><b><?= "{$display}:" ?></b> <?= "{$attribute}" ?></li>
+                <!-- here i am trying to display the image as well as the words -->
+        <?php endforeach ?>   
+        
     <?php endforeach ?>  
+<?php endif ?> 
 </ul>
 <!-- ok correctly displays all items in multi array, each needs styling now, and image is not working  -->
 
@@ -90,4 +96,4 @@ $characters = array(
    
    <!-- <?php if (isset($_GET)):?> looking to select only checked character cards to show
   
-    <?php endif ?> --> -->
+    <?php endif ?> --> 
