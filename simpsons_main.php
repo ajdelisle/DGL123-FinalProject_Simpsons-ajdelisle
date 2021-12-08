@@ -86,7 +86,7 @@
         <!--close primary-->
     </div>
     <!--close content-->
-    <?php require 'simpsons_main.php'; ?> 
+    <?php require 'simpsons_array.php'; ?> 
 </body>
 
 </html>

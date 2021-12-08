@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'simpsons_final');
+$conn = mysqli_connect('localhost', 'root', '', 'simpson_final');
 if(mysqli_connect_errno()){
     echo "Failed to connect to MYSQL:" . mysqli_connect_error();
 }
@@ -65,17 +65,18 @@ $json_char = json_encode($characters);
 mysqli_query($conn, "insert into characters(character) values ('$json_char')");
 echo "Record inserted successfully.";
 
+$sql = "INSERT into characters (homer,marge,bart,lisa,maggie, moe) VALUES (?,?, ?, ?, ?, ?)";
+$statement = $conn->prepare($sql);
+$statement->bind_param('ssi', $homer, $marge, $bart, $lisa, $maggie, $moe);
+$statement->execute();
+
 // foreach ($character as $item){
 //     if(isset($_POST['kl_vkbd_parsed="true"'])){
 //         echo "checked "."<br>";
 //     }
     
-foreach ($item as $list => $attribute){
-    $display = ucwords(str_replace("_"," ",$list));
-    echo "{$display}: {$attribute}<br/>";
-}
+// foreach ($item as $list => $attribute){
+//     $display = ucwords(str_replace("_"," ",$list));
+//     echo "{$display}: {$attribute}<br/>";
+// }
 
-$sql = "INSERT into characters () VALUES (?,?, ?, ?, ?, ?,?,0)";
-$statement = $conn->prepare($sql);
-$statement->bind_param('ssi', $size, $topping, $quantity);
-$statement->execute();
