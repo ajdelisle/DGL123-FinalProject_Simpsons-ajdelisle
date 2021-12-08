@@ -1,8 +1,8 @@
 <?php
+
+// connect database for characters
+$conn = mysqli_connect('localhost', 'root', '', 'Simpsons');
 //set up multidimensional array with card info for each simpson
-
-
-
 $characters= [
    [
        
@@ -69,7 +69,10 @@ $characters= [
 <!-- first I want to display all characters in the array, as their own li within a ul -->
 <ul>
     <?php foreach($characters as $character) :?>
-        <img src="images/bart.png">
+        
+       
+       <img src = "images/homer.png">
+
         <?php foreach($character as $list => $attribute) :?>
            <?php $display = ucwords(str_replace("_"," ",$list)) ?>
                 <li><b><?= "{$display}:" ?></b> <?= "{$attribute}" ?></li>
