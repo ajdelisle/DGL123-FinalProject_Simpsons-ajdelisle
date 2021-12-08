@@ -1,5 +1,8 @@
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'simpsons_final');
+if(mysqli_connect_errno()){
+    echo "Failed to connect to MYSQL:" . mysqli_connect_error();
+}
 // $homer = "first_name"."last_name";
 // $marge = "first_name"."last_name";
 $homer= $_POST["homer"];
@@ -58,6 +61,10 @@ $characters = array(
         "image_url"=> "images/moe.png"
     )
 );
+$json_char = json_encode($characters);
+mysqli_query($conn, "insert into characters(character) values ('$json_char')");
+echo "Record inserted successfully.";
+
 // foreach ($character as $item){
 //     if(isset($_POST['kl_vkbd_parsed="true"'])){
 //         echo "checked "."<br>";
@@ -68,7 +75,7 @@ foreach ($item as $list => $attribute){
     echo "{$display}: {$attribute}<br/>";
 }
 
-$sql = "INSERT into Characters () VALUES (?,?, ?, ?, ?, ?,?,0)";
+$sql = "INSERT into characters () VALUES (?,?, ?, ?, ?, ?,?,0)";
 $statement = $conn->prepare($sql);
 $statement->bind_param('ssi', $size, $topping, $quantity);
 $statement->execute();
