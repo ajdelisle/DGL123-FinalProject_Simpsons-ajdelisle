@@ -2,61 +2,64 @@
 
 // connect database for characters
 $conn = mysqli_connect('localhost', 'root', '', 'Simpsons');
-//set up multidimensional array with card info for each simpson
-$characters= [
-   [
-       
-        "first_name" => "Homer",
-        "last_name" => "Simpson",
-        "age"=> "40",
-        "occupation" => " Nuclear Safety Inspector",
-        "voiced_by"=> "Dan Castellaneta",
-        
-   ], 
 
-  [
+//set up multidimensional array with info for each character
+$homer= $_POST["homer"];
+$marge= $_POST["marge"];
+$bart= $_POST["bart"];
+$lisa= $_POST["lisa"];
+$maggie= $_POST["maggie"];
+$moe= $_POST["moe"];
+
+$characters = array(
+
+    "homer" => array(
+        "first_name"=> "Homer",
+        "last_name"=> "Simpson",
+        "age"=> "40",
+        "occupation"=> " Nuclear Safety Inspector",
+        "voiced_by"=> "Dan Castellaneta",
+        "image_url"=> "images/homer.png"
+    ),
+    "marge"=> array(
         "first_name" => "Marge",
         "last_name" => "Simpson",
-        "age" => "40",
-        "occupation" =>"Homemaker",
-        "voiced_by" => "Julie Kavner",
-        
-  ],
-
-    [
-        "first_name" => "Bart",
-        "last_name" => "Simpson",
-        "age" => "10",
-        "occupation" => "Student",
-        "voiced_by" => "Nancy Cartwright",
-        
-    ],
-
-   [
-        "first_name" => "Lisa",
-        "last_name" => "Simpson",
-        "age" =>"8",
-        "occupation" => "Student",
-        "voiced_by" => "Yeardley Smith",
-        
-   ],
-    
-  [
-        "first_name" => "Maggie",
-        "last_name" => "Simpson",
-        "age" => "8",
-       
-  ],
-
-    [
-        "first_name" => "Moe",
-        "last_name" => "Szyslak",
-        "age" => "55",
-        "occupation" => "Bartender",
-        "voiced_by" => "",
-       
-    ],
-];
+        "age"=> "40",
+        "occupation"=> "Homemaker",
+        "voiced_by"=> "Julie Kavner",
+        "image_url"=> "images/marge.png"
+    ),
+    "bart"=> array(
+        "first_name"=> "Bart",
+        "last_name"=> "Simpson",
+        "age"=> "10",
+        "occupation"=> "Student",
+        "voiced_by"=> "Nancy Cartwright",
+        "image_url"=> "images/bart.png"
+    ),
+    "lisa"=> array(
+        "first_name"=> "Lisa",
+        "last_name"=> "Simpson",
+        "age"=> "8",
+        "occupation"=> "Student",
+        "voiced_by"=> "Yeardley Smith",
+        "image_url"=> "images/lisa.png"
+    ),
+    "maggie"=> array(
+        "first_name"=> "Maggie",
+        "last_name"=> "Simpson",
+        "age"=> "8",
+        "image_url"=> "images/maggie.png"
+    ),
+    "moe"=> array(
+        "first_name"=> "Moe",
+        "last_name"=> "Szyslak",
+        "age"=> "55",
+        "occupation"=> "Bartender",
+        "voiced_by"=> "",
+        "image_url"=> "images/moe.png"
+    )
+);
 
 // echo "<pre>";
 // print_r($simpsons_array);
