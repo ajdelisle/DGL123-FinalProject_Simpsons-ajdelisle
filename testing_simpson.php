@@ -1,18 +1,17 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'addbyhand');
+$conn = mysqli_connect('localhost', 'root', '', 'Simpsons');
 if(mysqli_connect_errno()){
     echo "Failed to connect to MYSQL:" . mysqli_connect_error();
 }
-// $homer = "first_name"."last_name";
-// $marge = "first_name"."last_name";
-// $homer= $_POST["homer"];
-// $marge= $_POST["marge"];
-// $bart= $_POST["bart"];
-// $lisa= $_POST["lisa"];
-// $maggie= $_POST["maggie"];
-// $moe= $_POST["moe"];
 
-$characters = array(
+// $homer= $_GET["homer"];
+// $marge= $_GET["marge"];
+// $bart= $_GET["bart"];
+// $lisa= $_GET["lisa"];
+// $maggie= $_GET["maggie"];
+// $moe= $_GET["moe"];
+
+$test = array(
 
     "homer" => array(
         "first_name"=> "Homer",
@@ -62,20 +61,24 @@ $characters = array(
     // )
 );
 
-$json_char = json_encode($characters);
-mysqli_query($conn, "insert into characters(character) values ('$json_char')");
-echo "Record inserted successfully.";
+// $json_char = json_encode($characters);
+// mysqli_query($conn, "insert into characters(character) values ('$json_char')");
+// echo "Record inserted successfully.";
 
 // $sql = "INSERT into characters (homer,marge,bart,lisa,maggie, moe) VALUES (?,?, ?, ?, ?, ?)";
 // $statement = $conn->prepare($sql);
 // $statement->bind_param('ssi', $homer, $marge, $bart, $lisa, $maggie, $moe);
 // $statement->execute();
 
-foreach ($characters as $item){
-    if(isset($_GET['submit'])){
-        $homer= $_GET["homer"];
+//trying to select checkbox to display array
+    if(isset($_GET['test'])){
+        $test= $_GET['test'];
+        echo "this is your spot";
+        foreach($test as $key => $value){
+            echo "$value";
+        }
     }
-}
+
 // foreach ($item as $list => $attribute){
 //     $display = ucwords(str_replace("_"," ",$list));
 //     echo "{$display}: {$attribute}<br/>";
