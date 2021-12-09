@@ -11,7 +11,7 @@
     <!-- <style>
         @media print {#ghostery-tracker-tally {display: none !important}}
     </style> -->
-
+    <?php $conn = mysqli_connect('localhost', 'root', '', 'Simpsons'); ?>
 </head>
 
 <body data-new-gr-c-s-check-loaded="8.891.0" data-gr-ext-installed=''>
@@ -36,7 +36,7 @@
                                 <h3 class="form_heading">
                                     Select characters to show
                                 </h3>
-                                <form method="get">
+                                <form method="post">
                                     <ul class="form_items">
                                         <li class="form_item">
                                             <label for="homer"> Homer Simpson</label>
@@ -87,7 +87,8 @@
     </div>
     <!--close content-->
     <!-- <?php require 'simpsons_array.php'; ?>  -->
-    <?php require 'testing_simpson.php'; ?> 
+    <!-- <?php require 'testing_simpson.php'; ?>  -->
+    <?php require 'final-try.php'; ?>
 </body>
 
 </html>

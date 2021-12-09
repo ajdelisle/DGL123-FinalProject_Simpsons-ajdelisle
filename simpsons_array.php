@@ -62,7 +62,7 @@ $characters = array(
 );
 
 // echo "<pre>";
-// print_r($simpsons_array);
+// print_r($characters);
 // echo "</pre>";
 
 
@@ -72,7 +72,7 @@ $characters = array(
 <!-- first I want to display all characters in the array, as their own li within a ul -->
 <ul>
     <!-- setting conditional that if submit is hit then we would fetch info for these characters -->
-<?php if ( isset( $_GET['submit'] ) ):?>
+    <?php if ( isset( $_GET['submit'] ) ):?>
     <?= $homer= $_GET["homer"];$marge= $_GET["marge"];
         $bart= $_GET["bart"]; $lisa= $_GET["lisa"];
         $maggie= $_GET["maggie"]; $moe= $_GET["moe"];?>
@@ -89,11 +89,7 @@ $characters = array(
     <?php endforeach ?>  
 <?php endif ?> 
 </ul>
-<!-- ok correctly displays all items in multi array, each needs styling now, and image is not working  -->
 
 
- 
    
-   <!-- <?php if (isset($_GET)):?> looking to select only checked character cards to show
   
-    <?php endif ?> --> 
