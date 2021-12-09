@@ -69,7 +69,7 @@ $characters = array(
 
 
 ?>
-<!-- first I want to display all characters in the array, as their own li within a ul -->
+<!-- first I want to display all characters in the array, as their own li within a ul  -->
 <ul>
     <!-- setting conditional that if submit is hit then we would fetch info for these characters -->
     <?php if ( isset( $_GET['submit'] ) ):?>

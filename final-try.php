@@ -10,6 +10,8 @@ $conn = mysqli_connect('localhost', 'root', '', 'Simpsons');
 //select data to show
 $query = 'SELECT * FROM addbyhand';
 ?>
+<div class="characters__container layout-container">
+<div class="characters__row layout-row">
 <ul class="characters_items">
     <li class="characters_itemContainer">
 
@@ -38,3 +40,5 @@ $query = 'SELECT * FROM addbyhand';
 </div>
 </li>
 </ul>
+</div>
+</div>
