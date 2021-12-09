@@ -15,12 +15,14 @@ $query = 'SELECT * FROM addbyhand';
 <ul class="characters_items">
     <li class="characters_itemContainer">
 
-    <div class="character_item">
-        <img src="images/homer.png" alt="homer" class="character_image">
+    
     
     <?php if ($results = mysqli_query($conn, $query)):?>
         <?php while ($row = mysqli_fetch_array($results)):?>
             
+            <div class="character_item">
+                <img src=<?=$row['img_path']?> alt="" class="character_image" >
+                
             <div class="character_info">
                 <h3 class="character_name"><?= $row['first_name'] . $row['last_name']?></h3>
             
@@ -28,16 +30,18 @@ $query = 'SELECT * FROM addbyhand';
                 <b>Age:</b><?=$row['age']?>
             </div>
             <div class="characters_occupation characters_attribute">
+                <php? if(!empty($row)):?>
                 <b>Occupation:</b><?=$row['occupation']?>
+                <php? endif ?>
             </div>
             <div class="characters_voicedBy characters_attribute">
                 <b>Voiced by:</b><?=$row['voiced_by'] ?>
             </div>
-            
+            </div>
             </div> 
         <?php endwhile ?>
     <?php endif ?>
-</div>
+
 </li>
 </ul>
 </div>
