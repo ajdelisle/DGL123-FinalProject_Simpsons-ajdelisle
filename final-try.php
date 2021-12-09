@@ -10,39 +10,39 @@ $conn = mysqli_connect('localhost', 'root', '', 'Simpsons');
 //select data to show
 $query = 'SELECT * FROM addbyhand';
 ?>
+<!-- enter into html mode  
+this is the styling for cards from css/html on website to reverse engineer -->
 <div class="characters__container layout-container">
-<div class="characters__row layout-row">
-<ul class="characters_items">
-    <li class="characters_itemContainer">
+    <div class="characters__row layout-row">
+    <ul class="characters_items">
+        <li class="characters_itemContainer">
+<!-- fetches data using if/while loops to cycle through all the data on database for characters -->
+        <?php if ($results = mysqli_query($conn, $query)):?>
+            <?php while ($row = mysqli_fetch_array($results)):?>
 
-    
-    
-    <?php if ($results = mysqli_query($conn, $query)):?>
-        <?php while ($row = mysqli_fetch_array($results)):?>
-            
-            <div class="character_item">
-                <img src=<?=$row['img_path']?> alt="" class="character_image" >
-                
-            <div class="character_info">
-                <h3 class="character_name"><?= $row['first_name'] . $row['last_name']?></h3>
-            
-            <div class="characters_age characters_attribute">
-                <b>Age:</b><?=$row['age']?>
-            </div>
-            <div class="characters_occupation characters_attribute">
-                <php? if(!empty($row)):?>
-                <b>Occupation:</b><?=$row['occupation']?>
-                <php? endif ?>
-            </div>
-            <div class="characters_voicedBy characters_attribute">
-                <b>Voiced by:</b><?=$row['voiced_by'] ?>
-            </div>
-            </div>
-            </div> 
-        <?php endwhile ?>
-    <?php endif ?>
+                <div class="character_item">
+                    <img src=<?=$row['img_path']?> alt="" class="character_image" >
 
-</li>
-</ul>
-</div>
+                    <div class="character_info">
+                        <h3 class="character_name"><?= $row['first_name'] . $row['last_name']?></h3>
+
+                    <div class="characters_age characters_attribute">
+                        <b>Age:</b><?=$row['age']?>
+                    </div>
+
+                    <div class="characters_occupation characters_attribute">            
+                        <b>Occupation:</b><?=$row['occupation']?>        
+                    </div>
+
+                    <div class="characters_voicedBy characters_attribute">
+                        <b>Voiced by:</b><?=$row['voiced_by'] ?>
+                </div>
+                </div>
+                </div> 
+            <?php endwhile ?>
+        <?php endif ?>
+
+        </li>
+    </ul>
+    </div>
 </div>
